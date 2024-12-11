@@ -1,0 +1,546 @@
+/* Estilos generales */
+body {
+  font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/bgasus.gif'); /* Ruta del GIF */
+    background-size: cover; /* Hace que el GIF cubra todo el fondo */
+    background-position: center; /* Centra el GIF en el fondo */
+    background-attachment: fixed; /* Mantiene el GIF fijo mientras se desplaza */
+    color: #fff; /* Color de texto blanco */
+    text-align: center; /* Centra el texto */
+}
+    
+/* -------------------- Encabezado --------------------*/
+header {
+    background-color: #111;
+   color: white;
+    padding: 20px 0;
+    position: fixed; /* Hace que el encabezado se quede fijo en la parte superior */
+    top: 0; /* Lo posiciona en la parte superior */
+    left: 0; /* Lo coloca en el borde izquierdo de la pantalla */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    z-index: 1000; /* Se asegura que el encabezado esté encima de otros elementos */
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------- */
+/*            Titulo de Juegos con imagenes             */
+/* ---------------------------------------------------- */
+
+/* Contenedor principal para el banner */
+.game-gallery {
+    display: flex;
+    flex-wrap: nowrap; /* No queremos que los elementos se envuelvan */
+    gap: 5px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Alinear las tarjetas hacia el centro */
+    overflow-x: auto; /* Desplazamiento horizontal */
+    width: 100%; /* Ancho completo */
+    height: 350px; /* Altura fija */
+    align-items: center; /* Alinear verticalmente */
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Estilo de las tarjetas de juegos */
+.game-card {
+    width: 200px; /* Tamaño fijo */
+    height: 300px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px; /* Tamaño fijo */
+}
+
+.game-card img {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 200px;
+    object-fit: cover; /* No distorsionar imagen */
+    border-radius: 10px;
+}
+
+/* Media Queries para hacer el diseño responsivo */
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    .game-card {
+        width: 150px; /* Reducir tamaño */
+        height: 250px; /* Ajustar altura */
+    }
+
+    .game-gallery {
+        height: 250px; /* Reducir altura */
+        gap: 10px; /* Aumentar espacio entre tarjetas */
+    }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .game-card {
+        width: 120px; /* Reducir tamaño */
+        height: 200px; /* Ajustar altura */
+    }
+
+    .game-gallery {
+        height: 200px; /* Reducir altura */
+        gap: 8px; /* Reducir espacio entre tarjetas */
+    }
+
+    h3 {
+        font-size: 14px; /* Reducir tamaño de texto */
+    }
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/* -------------------------------- */
+/*            JUEGOS                */
+/* -------------------------------- */
+
+/*  PRECIOS JUEGOS    */
+
+.price {
+    font-size: 1.5rem;
+    color: #00ff37;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+/*  CATALOGO JUEGOS    */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+    transition: all 300ms;
+}
+
+h1:hover {
+    transform: scale(1.15);
+}
+
+#pelicula {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Asegura que haya 6 columnas */
+    width: 90%;
+    margin: 5%;
+    grid-gap: 20px;
+}
+
+#pelicula img {
+    width: 300px;   /* Cambia el ancho de las imágenes */
+    height: 380px;  /* Cambia la altura de las imágenes */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+    border-radius: 8px; /* Redondea las esquinas */
+    transition: all 300ms;
+    position: relative;
+}
+
+
+#pelicula img:hover {
+    transform: scale(1.1); /* Efecto de aumento cuando se pasa el ratón */
+}
+
+#logo {
+    width: 15%;
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/* -------------------------------- */
+/*            CONSOLAS              */
+/* -------------------------------- */
+
+/* Colores y tipografía */
+body {
+    margin: 0;
+    padding: 0;
+    color: #00ff40; /* Color oscuro para texto */
+    font-family: 'Press Start 2P', cursive; /* Tipografía del cuerpo */
+}
+
+h1 {
+    font-size: 2rem; /* Tamaño de fuente para h1 */
+}
+
+img {
+    max-width: 100%; /* Hace que las imágenes no excedan el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/*-- LAYOUT --*/
+.main {
+    padding: 2rem 0;
+}
+
+/* Ajustes en la cuadrícula para asegurar que las tarjetas tengan el mismo tamaño */
+.bd-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 80%;
+    margin: 0 auto;
+    align-items: stretch; /* Hace que todas las tarjetas tengan la misma altura */
+}
+
+/*-- PAGES --*/
+.title-shop {
+    position: relative;
+    margin: 0 2.5rem;
+}
+
+.title-shop::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 72px;
+    height: 2px;
+    background-color: #00ff40; /* Color de la línea */
+    margin-left: .25rem;
+}
+
+/*-- COMPONENT --*/
+/* Estilo de las tarjetas */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #4918a3; /* Color de fondo para las tarjetas */
+    height: 100%; /* Asegura que las tarjetas tengan la misma altura */
+}
+
+/* Estilo de las imágenes dentro de las tarjetas */
+.card__img {
+    width: 180px;
+    height: auto;
+    padding: 3rem 0;
+    transition: .5s;
+    margin-top: -1rem;
+    transform-origin: center;
+}
+
+/* Estilo del nombre en las tarjetas */
+.card__name {
+    position: absolute;
+    left: -25%;
+    top: 0;
+    width: 3.5rem;
+    height: 100%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    background-color: #00ff40; /* Fondo oscuro para el texto */
+    color: #ffffff;
+    font-weight: bold;
+    transition: .5s;
+}
+
+/* Iconos dentro de las tarjetas */
+.card__icon {
+    font-size: 1.5rem;
+    color: #00ff40; /* Color de los iconos */
+}
+
+/* Efecto al pasar el ratón sobre los iconos */
+.card__icon:hover {
+    color: #FF5151; /* Color de acento al pasar el ratón */
+}
+
+/* Detalles de los precios dentro de las tarjetas */
+.card__precis {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: .5s;
+}
+
+.card__preci {
+    display: block;
+    text-align: center;
+}
+
+.card__preci--before {
+    font-size: 0.75rem;
+    color: #FF5151; /* Color del precio anterior */
+    margin-bottom: .25rem;
+}
+
+.card__preci--now {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Efecto al pasar el ratón sobre las tarjetas */
+.card:hover {
+    box-shadow: 0 .5rem 1rem #D1D9E6;
+}
+
+.card:hover .card__name {
+    left: 0;
+}
+
+.card:hover .card__img {
+    transform: rotate(30deg);
+    margin-left: 3.5rem;
+}
+
+.card:hover .card__precis {
+    margin-left: 3.5rem;
+    padding: 0 1.5rem;
+}
+
+/*-- MEDIA QUERIES --*/
+@media screen and (min-width: 1200px) {
+    body {
+        margin: 3rem 0 0 0;
+    }
+
+    .title-shop {
+        margin: 0 5rem;
+    }
+
+    .bd-grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Espacio después de los títulos */
+h1, h2, h3, .title-shop {
+    margin-bottom: 2rem; /* Ajusta este valor según el espacio que necesites */
+}
+
+/* Espacio antes y después de los títulos */
+h1, h2, h3 {
+    margin-top: 2rem; /* Espacio antes del título */
+    margin-bottom: 2rem; /* Espacio después del título */
+}
+
+
+/* Espacio antes del footer */
+footer {
+    margin-top: 3rem; /* Ajusta este valor según el espacio que necesites */
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/* -------------------------------- */
+/*            FOOTER                */
+/* -------------------------------- */
+
+
+:root {
+    --color-marron: #6d4c41; /* Marrón pastel */
+    --color-rosado: #f8bbd0; /* Rosado pastel */
+    --color-verde: #b2dfdb; /* Verde pastel suave */
+    --color-gris-oscuro: #3B3B3B; /* Gris oscuro */
+    --color-fucsia: #28a6b5; /* Celeste */
+}
+
+.footer {
+    background-color: #444444;
+    padding: 80px 0;
+    min-height: 40vh; /* Asegura que la sección footer no quede recortada */
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem;
+}
+
+/* Configuración para las columnas del menú */
+.menu-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 3rem;
+    justify-items: start; 
+}
+
+.title-footer {
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--color-fucsia); 
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+    text-decoration: none;
+    color: #fff; 
+    font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+    color: var(--color-fucsia);
+}
+
+/* Redes sociales */
+.footer-links h4 {
+    color: var(--color-fucsia); 
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: start;
+}
+
+.social-link a {
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: rgb(24, 180, 172);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.social-link a:hover {
+    background-color: var(--color-fucsia);
+    color: rgb(255, 255, 255);
+    transform: scale(1.2);
+}
+
+/* Formulario de newsletter */
+.content input {
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--color-rosado);
+    cursor: pointer;
+    padding: 0.5rem 0 1.2rem;
+    color: var(--color-fucsia);
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.content button {
+    border: none;
+    background-color: var(--color-fucsia);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.content button:hover {
+    background-color: #000;
+    color: var(--color-fucsia);
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/* -------------------------------- */
+/*        MEDIA QUERIES             */
+/* -------------------------------- */
+@media (max-width: 768px) {
+    .menu-footer {
+        grid-template-columns: 1fr 1fr; 
+        justify-items: center;
+    }
+
+    .contact-info ul,
+    .information ul,
+    .my-account ul {
+        display: none;
+    }
+
+    .social-link a {
+        min-height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 468px) {
+    .menu-footer {
+        grid-template-columns: 1fr; 
+        justify-items: center;
+    }
+}
+
+/* Contenedor del copyright */
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 1px solid #ffffff;
+}
+
+.copyright p {
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.copyright {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Ajusta el tamaño de la imagen de métodos de pago */
+.copyright img {
+    width: 300px; 
+    height: auto; 
+}

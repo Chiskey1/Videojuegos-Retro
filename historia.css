@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+/* ------------------------------------------ */
+/* Estilo general para el HTML y el body */
+/* ------------------------------------------ */
+html, body {
+  font-family: 'Press Start 2P', cursive; /* Fuente retro */
+  padding: 0;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------------------------------ */
+/* Estilo para el contenedor principal (main) */
+/* ------------------------------------------ */
+.main {
+  flex: 1; /* Permite que crezca para ocupar espacio disponible */
+  display: flex;
+  flex-wrap: wrap; /* Asegura que los artículos se alineen correctamente */
+  gap: 1rem; /* Espaciado entre artículos */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  padding: 2rem;
+  box-sizing: border-box; /* Incluye el padding dentro del tamaño total */
+}
+
+/*------------------*/
+/*     HEADER       */
+/*------------------*/
+/* Estilo principal del encabezado */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #333;
+  padding: 10px 5%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el cuerpo */
+body {
+  margin-top: 80px;
+}
+
+/* Estilo de la sección .header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo para el logo */
+.header .logo img {
+  height: 80px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.header .logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo para las opciones de navegación */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #e91e63;
+}
+
+/* Estilo para el botón */
+.header .btn button {
+  background-color: #e91e63;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header .btn button:hover {
+  background-color: #d81b60;
+  transform: scale(1.1);
+}
+
+/* Estilo para la estructura del encabezado */
+header {
+  background-color: #111;
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+/* Estilo para la navegación */
+nav {
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  display: block;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #0ff;
+}
+
+/* Estilo para la línea degradada de los enlaces */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #f00, #0ff, #ff0);
+  animation: neon 1.5s ease-in-out infinite;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/*-----------------------------*/
+/*   Historia de Video Juegos  */
+/*-----------------------------*/
+/* Estilo para el contenedor principal de la sección */
+.sectionWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Estilo del swiper principal */
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding: 50px 20px;
+  overflow: hidden;
+}
+
+/* Estilo del fondo en parallax */
+.swiper .parallax-bg {
+  position: absolute;
+  right: -5%;
+  top: -50%;
+  width: 170%;
+  height: 170%;
+  background-image: url("img/bg.gif");
+  background-size: auto;
+  background-position: top center;
+  background-repeat: repeat;
+}
+
+/* Alineación de los elementos dentro del swiper-wrapper */
+.swiper .swiper-wrapper {
+  align-items: center;
+}
+
+/* Estilo general para cada slide del swiper */
+.swiper .swiper-slide {
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: rgba(102, 102, 102, 0.8);
+  border-radius: 7px;
+  padding: 10px;
+  margin: 0;
+  cursor: grab;
+  user-select: none;
+  text-wrap: pretty;
+}
+
+/* Bordes en los slides (before y after) */
+.swiper .swiper-slide::before {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  border-bottom: 1px dashed white;
+  border-right: 1px solid white;
+  border-radius: 0 0 7px 0;
+  content: "";
+  transition: all 0.3s ease;
+}
+
+/* Bordes en los slides (before y after) */
+.swiper .swiper-slide::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-top: 1px solid white;
+  border-left: 1px dashed white;
+  border-radius: 7px 0 0 0;
+  content: "";
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover en los slides */
+.swiper .swiper-slide:hover {
+  background: linear-gradient(
+    135deg,
+    #ff1e9c99,
+    #ff1ea499,
+    #ff1fbc99,
+    #ff1fde99,
+    #f620ff99,
+    #c721ff99,
+    #9723ff99,
+    #6a24ff99,
+    #4125ff99,
+    #252aff99,
+    #2641ff99,
+    #2649ff99
+  );
+}
+
+/* Efecto hover sobre los bordes del slide */
+.swiper .swiper-slide:hover::before,
+.swiper .swiper-slide:hover::after {
+  width: 170px;
+  height: 170px;
+  transition: all 0.3s ease;
+}
+
+/* Estilo para la tarjeta interna de cada slide */
+.swiper .swiper-slide .cardPopout {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 7px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Estilo para las imágenes dentro de los slides */
+.swiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+
+/* Estilo para el título del slide */
+.swiper .swiper-slide h2 {
+  font-size: 200%;
+  line-height: 110%;
+  margin: 0 0 7px 0;
+  color: white;
+  font-family: "Nabla", system-ui;
+  font-variation-settings: "EDPT" 100, "EHLT" 24;
+  background-color: #111;
+  border-radius: 100%;
+}
+
+/* Estilo para el subtítulo del slide */
+.swiper .swiper-slide h4 {
+  font-size: 110%;
+  line-height: 120%;
+  font-weight: 700;
+  margin: 0 0 13px 0;
+  color: #bbb;
+  font-style: italic;
+}
+
+/* Estilo del pie de cada slide con texto adicional */
+.swiper .swiper-slide figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 0 20px 0;
+  padding-left: 20px;
+  border-left: 1px solid white;
+}
+
+/* Estilo para los párrafos dentro de los slides */
+.swiper .swiper-slide figcaption p {
+  color: #999;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Estilo para los enlaces dentro de los slides */
+.swiper .swiper-slide a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.6s ease !important;
+}
+
+/* Efecto hover sobre los enlaces dentro de los slides */
+.swiper .swiper-slide a:hover {
+  color: black;
+  transition: all 0.6s ease;
+}
+
+/* Efecto hover sobre los enlaces con fondo */
+.swiper .swiper-slide a::after {
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2649ff;
+  content: "";
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+/* Efecto hover sobre el fondo del enlace */
+.swiper .swiper-slide a:hover::after {
+  right: 0;
+  transition: all 0.6s ease;
+}
+
+/* Efecto hover sobre los iconos dentro de los enlaces */
+.swiper .swiper-slide a svg {
+  width: 23px;
+  height: auto;
+  fill: white;
+  margin-left: 5px;
+  transition: all 0.6s ease;
+}
+
+/* Efecto hover sobre los iconos dentro de los enlaces */
+.swiper .swiper-slide a:hover svg {
+  margin-left: 10px;
+  fill: black;
+  transition: all 0.6s ease;
+}
+
+/* Estilo para la barra de desplazamiento del swiper */
+.swiper .swiper-scrollbar {
+  --swiper-scrollbar-bottom: 0px;
+  --swiper-scrollbar-size: 10px;
+}
+
+/* Estilo específico para pantallas grandes */
+@media (min-width: 2000px) {
+  .swiper .swiper-slide {
+    padding: 20px;
+  }
+}
+
+/* Ajuste para pantallas con altura menor a 550px */
+@media (max-height: 550px) {
+  .swiper .swiper-slide figcaption p {
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* Ajuste para pantallas con altura menor a 490px */
+@media (max-height: 490px) {
+  .swiper .swiper-slide figcaption p {
+    -webkit-line-clamp: 1;
+  }
+}
+
+/* Ajuste para pantallas con altura menor a 460px */
+@media (max-height: 460px) {
+  .swiper .swiper-slide figcaption p {
+    display: none;
+  }
+  .swiper .swiper-slide h4 {
+    margin: 0;
+  }
+}
+
+/* Ajuste para pantallas con altura menor a 430px */
+@media (max-height: 430px) {
+  .swiper .swiper-wrapper {
+    position: relative;
+    bottom: 6px;
+  }
+}
+
+/* Estilo para pantallas pequeñas (750px o menos) */
+@media (max-width: 750px) {
+  .swiper .parallax-bg {
+    width: 320%;
+  }
+}
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/* -------------------------------- */
+/*            FOOTER                */
+/* -------------------------------- */
+
+:root {
+  --color-marron: #6d4c41; /* Marrón pastel */
+  --color-rosado: #f8bbd0; /* Rosado pastel */
+  --color-verde: #b2dfdb; /* Verde pastel suave */
+  --color-gris-oscuro: #444444; /* Gris oscuro */
+  --color-fucsia: #28a6b5; /* Celeste */
+}
+
+.footer {
+  background-color: #444444;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3rem;
+}
+
+/* Configuración para las columnas del menú */
+.menu-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 3rem;
+  justify-items: start; 
+}
+
+.title-footer {
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--color-fucsia); 
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+  text-decoration: none;
+  color: #fff; 
+  font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+  color: var(--color-fucsia);
+}
+
+/* Redes sociales */
+.footer-links h4 {
+  color: var(--color-fucsia); 
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.social-link {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: start;
+}
+
+.social-link a {
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: rgb(24, 180, 172);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.social-link a:hover {
+  background-color: var(--color-fucsia);
+  color: rgb(255, 255, 255);
+  transform: scale(1.2);
+}
+
+/* Formulario de newsletter */
+.content input {
+  outline: none;
+  background: none;
+  border: 2px solid var(--color-rosado);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  color: var(--color-fucsia);
+  font-size: 1.2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.content button {
+  border: none;
+  background-color: var(--color-fucsia);
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  font-weight: 400;
+  width: 100%;
+}
+
+.content button:hover {
+  background-color: #000;
+  color: var(--color-fucsia);
+}
+
+/* Copyright */
+.copyright {
+  background-color: var(--color-gris-oscuro);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.copyright img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .menu-footer {
+      grid-template-columns: 1fr; 
+      gap: 2rem; 
+      text-align: center; 
+  }
+
+  .social-link {
+      justify-content: center; 
+  }
+}

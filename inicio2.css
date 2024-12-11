@@ -1,0 +1,804 @@
+/*--------*/
+/* HEADER */
+/*--------*/
+
+/* Estilo general del header fijo en la parte superior */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+    padding: 10px 5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajusta el margen superior del cuerpo para no ser cubierto por el header */
+body {
+    margin-top: 80px;
+}
+
+/* Contenedor de los elementos dentro del header (logo y enlaces) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el logo */
+.header .logo img {
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de zoom al pasar el mouse sobre el logo */
+.header .logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo de los enlaces de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo de los enlaces, con transición de color */
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* Cambio de color al pasar el mouse sobre los enlaces */
+.nav-links li a:hover {
+    color: #28a6b5;
+}
+
+/* Estilo para el botón dentro del header */
+.header .btn button {
+    background-color: #28a6b5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de aumento de tamaño en el botón al pasar el mouse */
+.header .btn button:hover {
+    transform: scale(1.1);
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/*---------------------------*/
+/* BIENVENIDA GOKU Y VEGETA  */
+/*---------------------------*/
+
+/* Contenedor de la sección de imagen */
+.image-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background: 
+      url('https://sm.ign.com/ign_es/news/c/confirmado/confirmado-trunks-estara-en-dragon-ball-fighterz_nvrd.png') no-repeat center center/cover, 
+      conic-gradient(from 135deg at 50% 15%, #e0dee1, #28a6b5 25%, #0000 0);
+    height: 500px;
+}
+
+/* Contenedor de la imagen */
+.image-container {
+    max-width: 360px;
+    z-index: 2;
+}
+
+/* Estilo de la imagen */
+.styled-img {
+    --s: min(50vw, 360px);
+    width: var(--s);
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top;
+    padding: calc(var(--s) / 4) calc(var(--s) / 8) 0;
+    box-sizing: border-box;
+    background: conic-gradient(from 135deg at 50% 15%, #e0dee1, #28a6b5 25%, #0000 0);
+    clip-path: polygon(-50% 0, 150% 0, 50% 100%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el cursor sobre la imagen */
+.styled-img:hover {
+    padding: 0;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/*-----------------*/
+/* ¿QUIÉNES SOMOS? */
+/*-----------------*/
+
+.about {
+    padding: 50px 20px;
+    background-color: #84c9d1;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------*/
+/* Media Queries para hacer el diseño responsive */
+/*-----------------------------------------------*/
+
+@media (max-width: 1024px) {
+    .image-section {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .styled-img {
+        width: 80vw;
+        --s: 80vw;
+    }
+
+    .about h2 {
+        font-size: 1.8rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-section {
+        padding: 20px 15px;
+    }
+
+    .image-container {
+        max-width: 90%;
+    }
+
+    .styled-img {
+        width: 90vw;
+        --s: 90vw;
+    }
+
+    .about h2 {
+        font-size: 1.6rem;
+    }
+
+    .about p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-section {
+        padding: 20px 10px;
+    }
+
+    .styled-img {
+        width: 100vw;
+        --s: 100vw;
+    }
+
+    .about h2 {
+        font-size: 1.4rem;
+    }
+
+    .about p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------*/
+/*     NOVEDADES, JUEGOS Y CONSOLAS       */
+/*----------------------------------------*/
+
+/*-----------------/
+/*lINEA QUE DIVIDE*/
+/*----------------*/
+/* -------------------------------------------- */
+/* Estilo para el separador horizontal (hr) */
+/* -------------------------------------------- */
+hr {
+    border: 1px solid #7a7b8f16;
+}
+
+/* ------------------------------------------- */
+/* Estilo para la sección de promociones */
+/* ------------------------------------------- */
+.promos {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.promos h2 {
+    font-size: 50px;
+    color: #FEFEFE;
+    margin-bottom: 35px;
+}
+
+/* ------------------------------------------- */
+/* Estilo para las categorías de productos */
+/* ------------------------------------------- */
+.categories {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.categorie {
+    display: flex;
+    align-items: center;
+    padding: 35px;
+}
+
+/* Estilo de las imágenes de las categorías */
+.categorie img {
+    width: 150px;
+}
+
+.categorie-1 {
+    width: 50%;
+}
+
+.categorie-1 h3 {
+    color: #FEFEFE;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.categorie-1 p {
+    color: #28a6b5;
+    font-size: 18px;
+}
+
+.categorie-img {
+    width: 50%;
+}
+
+/* ----------------------------------------- */
+/* Estilo para la sección de productos */
+/* ----------------------------------------- */
+.products {
+    padding: 50px 0;
+}
+
+.products h2 {
+    font-size: 50px;
+    color: #FEFEFE;
+    margin-bottom: 70px;
+}
+
+/* Estilo de los productos */
+.product {
+    text-align: center;
+}
+
+.product img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.product-txt h3 {
+    font-size: 18px;
+    color: #FEFEFE;
+    margin-bottom: 15px;
+}
+
+.product-txt p {
+    color: #B3B3B3;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.precio {
+    color: #28a6b5 !important;
+}
+
+/* Estilo del botón en productos */
+.btn-3 {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 14px;
+    color: #FEFEFE;
+    border: 1px solid #28a6b5;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+
+.btn-3:hover {
+    background-color: #28a6b5;
+}
+
+/* -------------------------------------------- */
+/* Estilos para la sección de media queries (pantallas más pequeñas) */
+/* -------------------------------------------- */
+@media (max-width: 991px) {
+
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    .menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .submenu:hover #carrito {
+        min-width: 100%;
+    }
+
+    .mySwiper-1 {
+        width: 300px;
+    }
+
+    .swiper-slide {
+        padding: 0 30px 50px 30px;
+    }
+
+    .header-content {
+        padding: 100px 0 50px 0;
+    }
+
+    .header-info {
+        padding: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-txt {
+        width: 100%;
+    }
+
+    .header-txt h1 {
+        font-size: 40px;
+    }
+
+    .header-img {
+        width: 100%;
+    }
+
+    .header-img img {
+        width: 200px;
+    }
+
+    .prices {
+        flex-direction: column;
+    }
+
+    .price-1 {
+        margin: 0;
+    }
+
+    .btn-1 {
+        margin: 20px 0;
+    }
+
+    .promos {
+        padding: 30px;
+    }
+
+    .promos h2 {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+
+    .categories {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .categorie {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .categorie-1 {
+        width: 100%;
+        margin-bottom: 25px;
+        order: -1;
+    }
+
+    .categorie-img {
+        width: 100%;
+    }
+
+    .products {
+        padding: 30px;
+    }
+
+    .products h2 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .link {
+        width: 100%;
+    }
+}
+
+/* ------------------------------------------ */
+/* Estilos para el contenido y diseño de los productos en el mostrador */
+/* ------------------------------------------ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenido{
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+}
+
+.mostrador{
+    width: 100%;
+    transition: .5s ease;
+}
+
+.mostrador .fila{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.mostrador .fila .item{
+    max-width: 210px;
+    padding: 30px;
+    height: 250px;
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.mostrador .fila .item:hover{
+    background-color: #e6e6e6;
+}
+
+.mostrador .fila .item img{
+    width: 100%;
+    margin: 30px 0;
+}
+
+.mostrador .fila .item .descripcion{
+    color: #707070;
+    font-weight: bold;
+}
+
+.mostrador .fila .item .precio{
+    color: #f85151;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* ------------------------------------------ */
+/* Estilo para la selección de productos */
+/* ------------------------------------------ */
+.seleccion{
+    transition: .5s ease;
+    opacity: 0;
+    width: 0%;
+    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cerrar{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* ------------------------------------------ */
+/* Estilos para la información del producto seleccionado */
+/* ------------------------------------------ */
+.info{
+    padding: 20px;
+}
+
+.info .size{
+    color:#e6e6e6
+}
+
+.info img{
+    display: block;
+    margin: 30px auto;
+    width: 80%;
+}
+
+.info h2{
+    color: #707070;
+    margin-bottom: 10px;
+}
+
+.info p{
+    font-size: 14px;
+    color: #707070;
+    margin-bottom: 10px;
+}
+
+.info .precio{
+    font-size: 30px;
+    font-weight: bold;
+    color: #f85151;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.info .fila{
+    display: flex;
+    align-items: flex-end;
+}
+
+.info .fila label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.info .fila select{
+    width: 100px;
+    font-size: 18px;
+    padding: 6px;
+    margin-right: 30px;
+}
+
+.info .fila button{
+    height: 40px;
+    border: none;
+    padding: 0 10px;
+    color: #fff;
+    background-color: #f85151;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/* -------------------------------- */
+/*            FOOTER                */
+/* -------------------------------- */
+
+:root {
+    --color-marron: #6d4c41; /* Marrón pastel */
+    --color-rosado: #f8bbd0; /* Rosado pastel */
+    --color-verde: #b2dfdb; /* Verde pastel suave */
+    --color-gris-oscuro: #3B3B3B; /* Gris oscuro */
+    --color-fucsia: #28a6b5; /* Celeste */
+}
+
+.footer {
+    background-color: #444444;
+    padding: 80px 0;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem;
+}
+
+/* Configuración para las columnas del menú */
+.menu-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 3rem;
+    justify-items: start; 
+}
+
+.title-footer {
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--color-fucsia); 
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+    text-decoration: none;
+    color: #fff; 
+    font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+    color: var(--color-fucsia);
+}
+
+/* Redes sociales */
+.footer-links h4 {
+    color: var(--color-fucsia); 
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: start;
+}
+
+.social-link a {
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: rgb(24, 180, 172);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.social-link a:hover {
+    background-color: var(--color-fucsia);
+    color: rgb(255, 255, 255);
+    transform: scale(1.2);
+}
+
+/* Formulario de newsletter */
+.content input {
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--color-rosado);
+    cursor: pointer;
+    padding: 0.5rem 0 1.2rem;
+    color: var(--color-fucsia);
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.content button {
+    border: none;
+    background-color: var(--color-fucsia);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.content button:hover {
+    background-color: #000;
+    color: var(--color-fucsia);
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/* -------------------------------- */
+/*        MEDIA QUERIES             */
+/* -------------------------------- */
+@media (max-width: 768px) {
+    .menu-footer {
+        grid-template-columns: 1fr 1fr; 
+        justify-items: center;
+    }
+
+    .contact-info ul,
+    .information ul,
+    .my-account ul {
+        display: none;
+    }
+
+    .social-link a {
+        min-height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 468px) {
+    .menu-footer {
+        grid-template-columns: 1fr; 
+        justify-items: center;
+    }
+}
+
+/* Contenedor del copyright */
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 1px solid #ffffff;
+}
+
+.copyright p {
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.copyright {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Ajusta el tamaño de la imagen de métodos de pago */
+.copyright img {
+    width: 300px; 
+    height: auto; 
+}

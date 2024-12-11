@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaiyanPower - Catalogo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="catalogo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+/* Estilos generales */
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+    text-align: center; 
+}
+
+/*--------------*/
+/*  Encabezado  */
+/*--------------*/
+header {
+    background-color: #111;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+/* Logo */
+.logo img {
+    width: 100%; /* Permite que la imagen se ajuste al contenedor */
+    max-width: 120px; /* Asegura que la imagen no exceda este tamaño */
+    height: auto; /* Mantiene la proporción de la imagen */
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navegación */
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: block;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #0ff;
+}
+
+/* Línea degradada */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #f00, #0ff, #ff0);
+    animation: neon 1.5s ease-in-out infinite;
+}
+
+@keyframes neon {
+    0%, 100% { transform: scaleX(0); opacity: 0; }
+    50% { transform: scaleX(1); opacity: 1; }
+}
+
+/* Media Queries para hacer el diseño responsive */
+
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 15px;
+    }
+
+    .logo img {
+        max-width: 100px; /* Ajusta el logo para pantallas más pequeñas */
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 10px 15px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .logo img {
+        max-width: 100px; /* Logo más pequeño para pantallas medianas */
+    }
+
+    nav ul li {
+        margin: 8px 12px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 5px;
+    }
+
+    .logo img {
+        max-width: 80px; /* Logo aún más pequeño para dispositivos pequeños */
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+}
+
+/* Estilos para la cabecera fija */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+    padding: 10px 5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin-top: 80px; /* Asegura que el contenido no se solape con el header fijo */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.header .logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #e91e63;
+}
+
+.header .btn button {
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header .btn button:hover {
+    background-color: #d81b60;
+    transform: scale(1.1);
+}
+
+      </style>
+      
+      <!-- Fuente retro -->
+      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+      </head>
+      <body>
+      <!-- Encabezado -->
+      <header>
+              <!-- Logo alineado a la izquierda -->
+              <div class="logo">
+                <img src="img\super-mario-world-yoshi.gif" alt="Saiyan Power Logo">
+              </div>
+      
+        <!-- Menú de navegación centrado -->
+        <nav>
+            <ul>
+              <li><a href="inicio2.html">Inicio</a></li>
+              <li><a href="catalogo.html">Catálogo</a></li>
+              <li><a href="historia.html">Historia de Videojuegos</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+      </header>
+
+<!------------------------------------------------------------------------------------------------------------>
+
+  <!-- Sección para la galería de videojuegos -->
+  <section class="game-section">
+    <div class="game-gallery">
+      <div class="game-card">
+        <img src="img/sonic.gif" alt="Juego 1">
+      </div>
+      <div class="game-card">
+        <img src="img/Pac-man-hunt.gif" alt="Juego 2">
+      </div>
+      <div class="game-card">
+        <img src="img/donkeykong.gif" alt="Juego 3">
+      </div>
+      <!-- Agrega más tarjetas si lo deseas -->
+    </div>
+  </section>
+
+
+<!--CATALOGOS DE JUEGOS Y CONSOLAS-->
+
+
+
+<!-- Catalogo de Juegos -->
+
+
+<!--Juegos Disponibles 1 -->
+<div class="flex-center">
+    <h1 class="title-shop">Juegos Disponibles</h1>
+    <br>
+</div>
+<div id="pelicula">
+    <img src="img/game/super_mario_bros.jpeg" alt="">
+    <img src="img/game/super_mario_bros2.jpeg" alt="">
+    <img src="img/game/super_mario_bros3.jpeg" alt="" >
+    <img src="img/game/super_mario_64.jpg" alt="">
+    <img src="img/game/equinox.jpg" alt="">
+    <img src="img/game/resident_evil.webp" alt="">
+</div>
+
+<!--Juegos Disponibles 2 -->
+
+<div id="pelicula">
+    <img src="img/game/resident4.webp" alt="">
+    <img src="img/game/donkey_kong.jpeg" alt="">
+    <img src="img/game/donkey_kong2.jpg" alt="">
+    <img src="img/game/donkey_kong3.jpeg" alt="" >
+    <img src="img/game/donkey_kongcountry3.jpeg" alt="">
+    <img src="img/game/tetris.jpeg" alt="">
+</div>
+
+<!--Juegos Disponibles 3 -->
+
+<div id="pelicula">
+    <img src="img/game/space_invaders.jpeg" alt="">
+    <img src="img/game/legend_of_zelda1.jpeg" alt="">
+    <img src="img/game/legend_of_zelda2.jpeg" alt="" >
+    <img src="img/game/legend_of_zelda_oracle_seasons.jpeg" alt="">
+    <img src="img/game/the_legend_of_zelda_ocarina_of_time.jpeg" alt="">
+    <img src="img/game/final_fantasy.png" alt="">
+</div>
+
+<!--Juegos Disponibles 4 -->
+
+<div id="pelicula">
+    <img src="img/game/bomberman.webp" alt="" >
+    <img src="img/game/bomberman1.jpeg" alt="">
+    <img src="img/game/super_pacman.jpeg" alt="">
+    <img src="img/game/pacman_tengen.jpg" alt="">
+    <img src="img/game/genesis_pacmania.jpg" alt="">
+    <img src="img/game/duckhunt.webp" alt="">
+</div>
+
+<!--Juegos Disponibles 5 -->
+
+<div id="pelicula">
+    <img src="img/game/street_fighter1.jpg" alt="" >
+    <img src="img/game/street_fighter2.jpg" alt="">
+    <img src="img/game/megaman.webp" alt="">
+    <img src="img/game/metroid.jpeg" alt="">
+    <img src="img/game/grand_theft_auto_san_andreas.jpg" alt="">
+    <img src="img/game/fifa.jpeg" alt="">
+</div>
+
+<!--Juegos Disponibles 5 -->
+
+<div id="pelicula">
+    <img src="img/game/contra.jpeg" alt="">
+    <img src="img/game/sonic_the_hedgehog.jpeg" alt="">
+    <img src="img/game/the_magical_quest.jpeg" alt="">
+    <img src="img/game/pokemonblue.jpeg" alt="" >
+    <img src="img/game/pokemonred.jpg" alt="">
+    <img src="img/game/crash_bandicoot.webp" alt="">
+</div>
+
+
+<!----------------------------------------------->
+<!----Gif Pinguino-->
+
+<div class="flex-center">
+    <img src="img/game-gaming.gif" alt="" id="logo">
+    <br>
+    <br>
+</div>
+
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+
+<!--Catalogo de Consolas-->
+
+<!--CONSOLAS 80S-->
+
+<h1 class="title-shop">      </h1>
+<h1 class="title-shop">Consolas de los años 80s</h1>
+<main class="main bd-grid">
+<article class="card">
+    <div class="card__img">
+        <img src="img/consolas/atari2600.png" alt="">
+    </div>
+    <div class="card__name">
+        <p>ATARI 2600</p>
+    </div>
+    <div class="card__precis">
+        <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+        
+        <div>
+            <span class="card__preci card__preci--before">₡150 000</span>
+            <span class="card__preci card__preci--now">₡100 000</span>
+        </div>
+        <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+</article>
+
+<article class="card">
+    <div class="card__img">
+        <img src="img/consolas/atari7800.png" alt="">
+    </div>
+    <div class="card__name">
+        <p>ATARI 7600</p>
+    </div>
+    <div class="card__precis">
+        <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+        <div>
+            <span class="card__preci card__preci--before">₡180 000</span>
+            <span class="card__preci card__preci--now">₡120 000</span>
+        </div>
+        <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+</article>
+
+
+<article class="card">
+    <div class="card__img">
+        <img src="img/consolas/intellivision.png" alt="">
+    </div>
+    <div class="card__name">
+        <p>INTELLIVISION</p>
+    </div>
+    <div class="card__precis">
+        <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+        
+        <div>
+            <span class="card__preci card__preci--before">₡160 000</span>
+            <span class="card__preci card__preci--now">₡110 000</span>
+        </div>
+        <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+</article>
+
+
+<article class="card">
+    <div class="card__img">
+        <img src="img/consolas/sega_master_system.png" alt="">
+    </div>
+    <div class="card__name">
+        <p>SEGA MASTER SYSTEM</p>
+    </div>
+    <div class="card__precis">
+        <a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+        
+        <div>
+            <span class="card__preci card__preci--before">₡200 000</span>
+            <span class="card__preci card__preci--now">₡150 000</span>
+        </div>
+        <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+</article>
+</main>
+
+
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+<!--CONSOLAS 90S-->
+
+<h1 class="title-shop">      </h1>
+<h1 class="title-shop">Consolas de los años 90S & 2000s</h1>
+<br>
+
+<main class="main bd-grid">
+<article class="card">
+<div class="card__img">
+<img src="img/consolas/gameboy.png" width="100" alt="">
+</div>
+<div class="card__name">
+<p>GAME BOY</p>
+</div>
+<div class="card__precis">
+<a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+
+<div>
+    <span class="card__preci card__preci--before">₡130 000</span>
+    <span class="card__preci card__preci--now">₡80 000</span>
+</div>
+<a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+</div>
+</article>
+
+
+<article class="card">
+<div class="card__img">
+<img src="img/consolas/turbografx16.png" alt="">
+</div>
+<div class="card__name">
+<p>TURBOGRAFX-16</p>
+</div>
+<div class="card__precis">
+<a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+<div>
+    <span class="card__preci card__preci--before">₡400 000</span>
+    <span class="card__preci card__preci--now">₡300 000</span>
+</div>
+<a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+</div>
+</article>
+
+
+<article class="card">
+<div class="card__img">
+<img src="img/consolas/supernintendo.png" alt="">
+</div>
+<div class="card__name">
+<p>SNES - SUPER NINTENDO</p>
+</div>
+<div class="card__precis">
+<a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+
+<div>
+    <span class="card__preci card__preci--before">₡200 000</span>
+    <span class="card__preci card__preci--now">₡150 000</span>
+</div>
+<a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+</div>
+</article>
+
+
+<article class="card">
+<div class="card__img">
+<img src="img/consolas/neogeo.png" alt="">
+</div>
+<div class="card__name">
+<p>NEOGEO</p>
+</div>
+<div class="card__precis">
+<a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+
+<div>
+    <span class="card__preci card__preci--before">₡700 000</span>
+    <span class="card__preci card__preci--now">₡500 000</span>
+</div>
+<a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+</div>
+</article>
+</main>
+
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+
+<!--CONSOLAS 2000S-->
+<main class="main bd-grid">
+<article class="card">
+<div class="card__img">
+<img src="img/consolas/ps1.png" alt="">
+</div>
+<div class="card__name">
+<p>PLAY STATION 1</p>
+</div>
+<div class="card__precis">
+<a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+
+<div>
+    <span class="card__preci card__preci--before">₡150 000</span>
+    <span class="card__preci card__preci--now">₡100 000</span>
+</div>
+<a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+</div>
+</article>
+
+
+<article class="card">
+<div class="card__img">
+<img src="img/consolas/ps2.png" width="100" alt="">
+</div>
+<div class="card__name">
+<p>PLAY STATION 2</p>
+</div>
+<div class="card__precis">
+<a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+<div>
+    <span class="card__preci card__preci--before">₡130 000</span>
+    <span class="card__preci card__preci--now">₡90 000</span>
+</div>
+<a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+</div>
+</article>
+
+
+<article class="card">
+<div class="card__img">
+<img src="img/consolas/xbox_classic.png" alt="">
+</div>
+<div class="card__name">
+<p>XBOX CLASSIC</p>
+</div>
+<div class="card__precis">
+<a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+
+<div>
+    <span class="card__preci card__preci--before">₡150 000</span>
+    <span class="card__preci card__preci--now">₡100 000</span>
+</div>
+<a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+</div>
+</article>
+
+
+<article class="card">
+<div class="card__img">
+<img src="img/consolas/xbox_360.png" width="100"  alt="">
+</div>
+<div class="card__name">
+<p>XBOX 360S</p>
+</div>
+<div class="card__precis">
+<a href="" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+
+<div>
+    <span class="card__preci card__preci--before">₡130 000</span>
+    <span class="card__preci card__preci--now">₡9000</span>
+</div>
+<a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+</div>
+</article>
+</main>   
+
+<!------------------------------------------------------------------------------------------------------------>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container container-footer">
+        <div class="menu-footer">
+            <!-- Información de Contacto -->
+            <section class="contact-info">
+                <p class="title-footer">Información de Contacto</p>
+                <ul>
+                    <li>Dirección: 71 Pennington Lane Vernon Rockville, CT 06066</li>
+                    <li>Teléfono: 123-456-7890</li>
+                    <li>Fax: 55555300</li>
+                    <li>Email: solobueno@support.com.com</li>
+                </ul>
+
+                <!-- Social Media Icons -->
+                <div class="footer-links">
+                    <h4>SÍGUENOS</h4>
+                    <div class="social-link">
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Información -->
+            <section class="information">
+                <p class="title-footer">Información</p>
+                <ul>
+                    <li><a href="#">Acerca de Nosotros</a></li>
+                    <li><a href="#">Información Delivery</a></li>
+                    <li><a href="#">Políticas de Privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </section>
+
+            <!-- Mi Cuenta -->
+            <section class="my-account">
+                <p class="title-footer">Mi cuenta</p>
+                <ul>
+                    <li><a href="#">Mi cuenta</a></li>
+                    <li><a href="#">Historial de órdenes</a></li>
+                    <li><a href="#">Lista de deseos</a></li>
+                    <li><a href="#">Boletín</a></li>
+                    <li><a href="#">Reembolsos</a></li>
+                </ul>
+            </section>
+
+            <!-- Boletín Informativo -->
+            <section class="newsletter">
+                <p class="title-footer">Boletín informativo</p>
+                <div class="content">
+                    <p>Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones y ofertas exclusivas.</p>
+                    <input type="email" placeholder="Ingresa el correo aquí...">
+                    <button>Suscríbete</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <img src="img/payment.png" alt="Pagos">
+        <p>Desarrollado por Chiskey &copy; 2024</p>
+    </div>
+</footer>
+
+<!------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script src="inicio2.js"></script>
+</body>
+
+</html>

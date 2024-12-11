@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <title>SaiyanPower - Contacto</title>
+    <style>
+  /* Estilos generales */
+  body {
+      font-family: 'Press Start 2P', cursive;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+      text-align: center; 
+  }
+    </style>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body class="gif-background">
+
+    <!-- Encabezado -->
+    <header>
+        <!-- Logo alineado a la izquierda -->
+        <div class="logo">
+            <img src="img\super-mario-world-yoshi.gif" alt="Saiyan Power Logo">
+        </div>
+
+        <!-- Menú de navegación centrado -->
+        <nav>
+            <ul>
+                <li><a href="inicio2.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="historia.html">Historia de Videojuegos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Sección de Contacto -->
+    <section class="contact">
+        <form id="contact-form" action="#">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+
+            <div id="success-message" style="display:none; color: green; margin-top: 20px; text-align: center;">
+                ¡Gracias por tu mensaje! Nos pondremos en contacto pronto.
+            </div>
+        </form>
+    </section>
+
+<!------------------------------------------------------------------------------------------------------------>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container container-footer">
+        <div class="menu-footer">
+            <!-- Información de Contacto -->
+            <section class="contact-info">
+                <p class="title-footer">Información de Contacto</p>
+                <ul>
+                    <li>Dirección: 71 Pennington Lane Vernon Rockville, CT 06066</li>
+                    <li>Teléfono: 123-456-7890</li>
+                    <li>Fax: 55555300</li>
+                    <li>Email: solobueno@support.com.com</li>
+                </ul>
+
+                <!-- Social Media Icons -->
+                <div class="footer-links">
+                    <h4>SÍGUENOS</h4>
+                    <div class="social-link">
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Información -->
+            <section class="information">
+                <p class="title-footer">Información</p>
+                <ul>
+                    <li><a href="#">Acerca de Nosotros</a></li>
+                    <li><a href="#">Información Delivery</a></li>
+                    <li><a href="#">Políticas de Privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </section>
+
+            <!-- Mi Cuenta -->
+            <section class="my-account">
+                <p class="title-footer">Mi cuenta</p>
+                <ul>
+                    <li><a href="#">Mi cuenta</a></li>
+                    <li><a href="#">Historial de órdenes</a></li>
+                    <li><a href="#">Lista de deseos</a></li>
+                    <li><a href="#">Boletín</a></li>
+                    <li><a href="#">Reembolsos</a></li>
+                </ul>
+            </section>
+
+            <!-- Boletín Informativo -->
+            <section class="newsletter">
+                <p class="title-footer">Boletín informativo</p>
+                <div class="content">
+                    <p>Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones y ofertas exclusivas.</p>
+                    <input type="email" placeholder="Ingresa el correo aquí...">
+                    <button>Suscríbete</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <img src="img/payment.png" alt="Pagos">
+        <p>Desarrollado por Chiskey &copy; 2024</p>
+    </div>
+</footer>
+
+</body>
+</html>

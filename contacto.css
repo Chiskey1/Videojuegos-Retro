@@ -1,0 +1,527 @@
+/*------------------*/
+/*      FONDO       */
+/*------------------*/
+
+/* Fondo con GIF */
+.gif-background {
+    margin: 0;
+    padding: 0;
+    background-image: url('img/mario-nintendo.gif'); /* Ruta del GIF */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantiene el GIF fijo mientras se desplaza */
+    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+}
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------*/
+/*     HEADER       */
+/*------------------*/
+/* Estilo principal del encabezado */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+    padding: 10px 5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el cuerpo de la página */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    margin-top: 80px;
+}
+
+/* Estilo de la sección .header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el logo */
+.header .logo img {
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.header .logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo para las opciones de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #e91e63;
+}
+
+/* Estilo para el botón */
+.header .btn button {
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header .btn button:hover {
+    background-color: #d81b60;
+    transform: scale(1.1);
+}
+
+/* Estilo para la estructura del encabezado */
+header {
+    background-color: #111;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+/* Estilo para la navegación */
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: block;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #0ff;
+}
+
+/* Estilo para la línea degradada de los enlaces */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #f00, #0ff, #ff0);
+    animation: neon 1.5s ease-in-out infinite;
+}
+
+@keyframes neon {
+    0%, 100% { transform: scaleX(0); opacity: 0; }
+    50% { transform: scaleX(1); opacity: 1; }
+}
+
+/* Media Queries para hacer el diseño responsive */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 10px 15px;
+    }
+    nav ul li a {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px 10px;
+        text-align: center;
+    }
+    .logo img {
+        width: 100px;
+    }
+    nav ul li {
+        margin: 8px 12px;
+    }
+    nav ul li a {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 5px;
+    }
+    .logo img {
+        width: 80px;
+    }
+    nav ul li {
+        margin: 5px 10px;
+    }
+    nav ul li a {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+}
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------*/
+/*    FORMULARIO    */
+/*------------------*/
+
+/* Estilo principal para el contenedor de contacto */
+.contact {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 80px;
+}
+
+/* Estilo para el título del formulario de contacto */
+.contact h2 {
+    text-align: center;
+    color: #1bc432;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para las etiquetas de los campos del formulario */
+.contact label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ff0000;
+    font-size: 16px;
+}
+
+/* Estilo para los campos de entrada de texto y textarea */
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #2141ac;
+    border-radius: 8px;
+    background-color: #fff3b0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilo para el botón de envío */
+.contact button {
+    width: 100%;
+    padding: 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+}
+
+/* Efecto hover sobre el botón de envío */
+.contact button:hover {
+    background-color: greenyellow;
+}
+
+/* Estilo para el mensaje de éxito después de enviar el formulario */
+#success-message {
+    color: green;
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Estilo para el formulario centrado */
+#contact-form {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Estilo para campos del formulario dentro de #contact-form */
+#contact-form label,
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Estilo para los campos de entrada de texto y textarea dentro de #contact-form */
+#contact-form input,
+#contact-form textarea {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Estilo para el botón dentro de #contact-form */
+#contact-form button {
+    background: #0f0;
+    color: #111;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Efecto hover sobre el botón dentro de #contact-form */
+#contact-form button:hover {
+    background: #0ff;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/* -------------------------------- */
+/*            FOOTER                */
+/* -------------------------------- */
+
+:root {
+    --color-marron: #6d4c41; /* Marrón pastel */
+    --color-rosado: #f8bbd0; /* Rosado pastel */
+    --color-verde: #b2dfdb; /* Verde pastel suave */
+    --color-gris-oscuro: #3B3B3B; /* Gris oscuro */
+    --color-fucsia: #28a6b5; /* Celeste */
+}
+
+.footer {
+    background-color: #444444;
+    padding: 80px 0;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem;
+}
+
+/* Configuración para las columnas del menú */
+.menu-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 3rem;
+    justify-items: start; 
+}
+
+.title-footer {
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--color-fucsia); 
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+    text-decoration: none;
+    color: #fff; 
+    font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+    color: var(--color-fucsia);
+}
+
+/* Redes sociales */
+.footer-links h4 {
+    color: var(--color-fucsia); 
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: start;
+}
+
+.social-link a {
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: rgb(24, 180, 172);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.social-link a:hover {
+    background-color: var(--color-fucsia);
+    color: rgb(255, 255, 255);
+    transform: scale(1.2);
+}
+
+/* Formulario de newsletter */
+.content input {
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--color-rosado);
+    cursor: pointer;
+    padding: 0.5rem 0 1.2rem;
+    color: var(--color-fucsia);
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.content button {
+    border: none;
+    background-color: var(--color-fucsia);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.content button:hover {
+    background-color: #000;
+    color: var(--color-fucsia);
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+/* -------------------------------- */
+/*        MEDIA QUERIES             */
+/* -------------------------------- */
+@media (max-width: 768px) {
+    .menu-footer {
+        grid-template-columns: 1fr 1fr; 
+        justify-items: center;
+    }
+
+    .contact-info ul,
+    .information ul,
+    .my-account ul {
+        display: none;
+    }
+
+    .social-link a {
+        min-height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 468px) {
+    .menu-footer {
+        grid-template-columns: 1fr; 
+        justify-items: center;
+    }
+}
+
+/* Contenedor del copyright */
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 1px solid #ffffff;
+}
+
+.copyright p {
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.copyright {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Ajusta el tamaño de la imagen de métodos de pago */
+.copyright img {
+    width: 300px; 
+    height: auto; 
+}
